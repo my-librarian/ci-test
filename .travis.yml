@@ -5,5 +5,6 @@ env:
   - secure: l1bFfed05KDxAxfvYM0JatUfe5o85VX/X/kdLNKMqrrESYmgagMmWzkTh8Ll6/s+UUDNyht/QRaseaxTcDNOObaP8BsytpkLBMJ+gRELLTOxVP30e+Tlq1TRj5RIwWElL3UPH1z0MV0f+WmNfQqEe1hY3eMp0dadIrErpFhwWauXe2fJVU0S8oZckeJe7FPVyBJxnP8iGx9u8E4Pl+rU/wBbGGzPqndLeE14wgr+cxWWS/GmZ6/4PgIkdztBX7RUZv1X9jR6+YtOyc6BB5kHTSD+ombXqhPuJPCXiAaMalqDK8Z20Njd7AIaHgJTnVxyq+NLgITS85MqWhJ/HO9RxkI1Bwo0iLYHZJp5+4GWI2owD+hI/02rgBWRq4ddW/49vgIe8bSuZz+gETokBLjhx/ZjlORjHsgTjbrbVFomyYg11sL70GWPidPripGrtzI1OGN2fzHgGtBv4ZNR39fT1gGkpjVYiJ7xxYbunAajn1V3HD+riHullQFALcFMv++iu+zzb5dCNTF6AF3bryXnke5YbpgOQBYy0WNpMSdylBqxcz0N3KSdeVfXvxjTV4bst9r3diCs9ANU4yr1bZHt7NnwOCH03Cbxfzyk0p5JuiDOF/v2SWE/Eb5TomROtfzMJVg7ofbMxGXpo16bgwJmUkqQsrVMHBtGhm1P1wZgEwI=
 language: node_js
 node_js:
-- stable
-after_success: sh deploy.sh
+  - stable
+after_success:
+  sh deploy.sh
