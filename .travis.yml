@@ -1,10 +1,3 @@
-deploy:
-  provider: script
-  skip_cleanup: true
-  script: deploy.sh
-  on:
-    tags: true
-    branch: master
 env:
   global:
   - secure: VbttZdMAJiULKqNcTqygZ+Jd2PVwQMtRDnLfPB9SYYAoPnoFVXQox1APX6E8twp7UGkxl+8SwIk3JjiEmcYB3tlVvZBy+vJJ07yOHbJFen2FzvW31nbfZYYLPH2GBvX9F0kNXBopBq1nPPxbut7HrncYcoU9xrbpClgE0Lf+wNRyfJacjId6hddYzOTEPjQQf2Z4Hp4xVTToqOpSonE79yeStNowTbJygt0lIODupyFoyoUdUfVAlciPT1ubpD1l4VgjRTpugeRTs3tvZQYGohVBAurQKc0H0nkneietFxKYddXObVbmgur9tfs1u5dm6N6V+c0/hb58K1RU3idaZZmBoTtMYv+si0PinhTEIw38Kvx0JHJvygU7RF6mf+OaLcG55fGwgZX1aLo8vhDO2nsFnid8468QvPgfFVKJTxU5IyGn8jAzhzN9OJcgG1NDS0uk3S9HA569NBe68oeVoNqPPBLJ3nYfxOL2Pcg+6aIwn3Uzx6YgKQsE9Pt1GcHhs4AMokbFURpEF2zWUP/XdoRPj2CtYR3dirSUCH21O/n/EitKw0qr8SKLhVlUodA2xCikCycOM7cEkA6Eg4gao7t1ChZh5gbb+Ia8JYmwhEplslxvUo513/ffVb9noS0+NkaoqieV9Wu6vaUoTEd+iKixAo15d9uBbogNwVFSySk=
@@ -12,3 +5,10 @@ env:
 language: node_js
 node_js:
 - "stable"
+after_success:
+  if ([ "$TRAVIS_BRANCH" == "master" ] || [ ! -z "$TRAVIS_TAG" ]) &&
+      [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+    echo "This will deploy!"
+  else
+    echo "This will not deploy!"
+  fi
