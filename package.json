@@ -1,0 +1,19 @@
+{
+  "name": "ci-test",
+  "version": "1.0.0",
+  "description": "CI Deployment test",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/my-librarian/ci-test.git"
+  },
+  "author": "Gopikrishna Sathyamurthy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/my-librarian/ci-test/issues"
+  },
+  "homepage": "https://github.com/my-librarian/ci-test#readme"
+}
