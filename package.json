@@ -4,7 +4,8 @@
   "description": "CI Deployment test",
   "main": "index.js",
   "scripts": {
-    "test": ""
+    "test": "",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
